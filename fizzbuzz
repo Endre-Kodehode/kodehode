@@ -1,3 +1,9 @@
+/*
+Lager en liste fra 1-100, men skriver Fizz hvis tallet kan deles på 3,
+Buzz hvis tallet kan deles på 5, og Fizz Buzz hvis tallet kan deles på 15
+Egen løsning :)
+*/
+
 for(let number = 0; number < 100; number++){
     if (number % 15 == 0){
         console.log("Fizz! Buzz!")
@@ -9,4 +15,3 @@ for(let number = 0; number < 100; number++){
         console.log(number)
     }
 }
-
