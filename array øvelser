@@ -1,0 +1,72 @@
+//Array øvelser!
+
+
+// .map method. konverter et array av fahrenheit til celsius
+
+const fahrenheit = [23, 140, 212, 41]
+
+function getCelcius(f){
+    return f.map(i => (5/9)*(i-32))
+}
+console.log(getCelcius(fahrenheit))
+
+// .some method. Finn en 'falsey' value i et array
+
+const array = [11, NaN, [], "Angels"]
+
+function checkForFalsey(v){
+    return v.some(i => !i)
+}
+console.log(checkForFalsey(array))
+
+// .reduce method. Finn antall bokstaver i et array av strings
+
+const wordarray = ["Kanin", "Fotball", "Motorsykkel"]
+
+function getValue(v){
+    return v.reduce((total, word) => total + word.length, 0)
+}
+console.log(getValue(wordarray))
+
+// .every method. Sjekk om alle tall i et array er kvadratiske
+
+const numbers = [9, 49, 81]
+function checkSquare(n){
+    return n.every(i => Math.sqrt(i) % 1 === 0)
+}
+console.log(checkSquare(numbers))
+
+// valgfri method. Luk ut ord fra et array som er under et gitt antall bokstaver
+
+const words = ["Keyboard", "Telefon", "Tre", "Bilde"]
+
+function wordFilter(w, c){
+    return w.filter(i => i.length > c)
+}
+console.log(wordFilter(words, 6))
+
+// valgfri method. Fjern cm og konverter til integers
+
+const tall = ["10 cm", "5.6 cm", "3.2 cm"]
+
+function converter(l){
+    return l.map(i => parseFloat(i))
+}
+console.log(converter(tall))
+
+// split og filter method. Finn antall vokaler i en setning
+// brukte str.match heller. mer elegant enn å drive å sakse
+
+const sentence = "In West Philadelphia, born and raised"
+
+function getVowels(str){
+    let m = ""
+    return m.length = str.match(/[aeiou]/gi); //regexp, lånt fra nettet
+}
+
+console.log(getVowels(sentence))
+
+
+
+
+
