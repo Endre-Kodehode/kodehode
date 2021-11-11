@@ -1,0 +1,79 @@
+// function shoeColorChoice(weather) {
+//   if (weather == "raining") {
+//     return "Shoe color should be blue.";
+//   } else if (weather == "snowing") {
+//     return "Shoe color should be white.";
+//   } else if (weather == "windy") {
+//     return "Shoe color should be red.";
+//   } else if (weather == "cold") {
+//     return "Shoe color should be green.";
+//   } else if (weather == "hot") {
+//     return "Shoe color should be yellow.";
+//   } else {
+//     return "Just wear whatever color you like.";
+//   }
+// }
+// console.log(shoeColorChoice("raining"));
+// console.log(shoeColorChoice("snowing"));
+// console.log(shoeColorChoice("windy"));
+// console.log(shoeColorChoice("cold"));
+// console.log(shoeColorChoice("hot"));
+// const weather = "snowing";
+
+// switch (weather) {
+//    case "raining":
+//      console.log("Shoe color should be blue");
+//      break;
+//    case "windy":
+//      console.log("Shoe color should be red");
+//      break;
+//    case "sunny":
+//      console.log("Shoe color should be yellow");
+//      break;
+//    case "snowing":
+//      console.log("Shoe color should be white");
+//      break;
+//    case "hot":
+//      console.log("Shoe color should be orange");
+//      break;
+//    case "cold":
+//      console.log("Shoe color should be brown");
+//      break;
+//    default:
+//      console.log("Wear whatever color");
+//  }
+
+const colors = ["yellow", "brown", "blue", "red", "blue"];
+const weathers = ["rainy", "raining", "snowing", "hot", "cold"];
+for (let i = 0; i <= weathers.length; i++) {
+  console.log(
+    "When the weather is " +
+      weathers[Math.floor(Math.random() * weathers.length)] +
+      ", you should wear " +
+      colors[Math.floor(Math.random() * colors.length)] +
+      " shoes."
+  );
+}
+
+let combos = {
+  rainy: "blue",
+  sunny: "red",
+  snowy: "white",
+  hot: "orange",
+  cold: "brown",
+};
+
+function match(weather) {
+  return (
+    "When the weather is " +
+    weather +
+    ", make sure to wear your " +
+    combos[weather] +
+    " shoes"
+  );
+}
+console.log(match("rainy"));
+console.log(match("sunny"));
+console.log(match("snowy"));
+console.log(match("hot"));
+console.log(match("brown"));
